@@ -6,9 +6,8 @@ You can add the bot to your Telegram group and have fun.
 
 ```
 TODO configure Maven
-- https://maven.apache.org/index.html
--- https://maven.apache.org/download.cgi
--- https://maven.apache.org/install.html
+- https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+- https://maven.apache.org/guides/getting-started/index.html
 TODO https://github.com/rubenlagus/TelegramBots
 ```
 
