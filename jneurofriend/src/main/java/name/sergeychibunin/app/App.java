@@ -1,6 +1,6 @@
 package name.sergeychibunin.app;
 
-import name.sergeychibunin.JNFBot.JNFBot
+import name.sergeychibunin.app.JNFBot.JNFBot;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 
 /**
