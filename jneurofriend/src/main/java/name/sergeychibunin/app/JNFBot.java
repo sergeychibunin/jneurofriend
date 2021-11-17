@@ -22,14 +22,19 @@ public class JNFBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         if (update.hasMessage() && update.getMessage().hasText()) {
-            SendMessage message = new SendMessage();
-            message.setChatId(update.getMessage().getChatId().toString());
-            message.setText(update.getMessage().getText());
+            String gottenMessageBody = update.getMessage().getText();
 
-            try {
-                execute(message); // Call method to send the message
-            } catch (TelegramApiException e) {
-                e.printStackTrace();
+            if (gottenMessageBody.startsWith("@jneurofriendbot")) {
+
+                SendMessage message = new SendMessage();
+                message.setChatId(update.getMessage().getChatId().toString());
+                message.setText(update.getMessage().getText());
+
+                try {
+                    execute(message); // Call method to send the message
+                } catch (TelegramApiException e) {
+                    e.printStackTrace();
+                }
             }
        }
     }
