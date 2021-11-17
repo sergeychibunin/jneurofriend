@@ -9,5 +9,6 @@ TODO configure Maven
 - https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 - https://maven.apache.org/guides/getting-started/index.html
 TODO https://github.com/rubenlagus/TelegramBots
+TODO https://www.baeldung.com/twitter4j
 ```
 

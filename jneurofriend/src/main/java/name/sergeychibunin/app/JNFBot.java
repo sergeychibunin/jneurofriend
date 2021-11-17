@@ -38,4 +38,8 @@ public class JNFBot extends TelegramLongPollingBot {
             }
        }
     }
+
+    private SendMessage askTwitterAccount() {
+
+    }
 }
