@@ -6,10 +6,8 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import twitter4j.Twitter;
 
 public class JNFBot extends TelegramLongPollingBot {
-    private Twitter twitter;
 
     public void setTwitter(Twitter twitter) {
         this.twitter = twitter;
