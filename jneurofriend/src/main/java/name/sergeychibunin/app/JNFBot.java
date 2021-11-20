@@ -7,6 +7,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class JNFBot extends TelegramLongPollingBot {
+    private final RSSTool twitter = new RSSTool();
 
     @Override
     public String getBotUsername() {
@@ -25,9 +26,8 @@ public class JNFBot extends TelegramLongPollingBot {
 
             if (gottenMessageBody.startsWith("@jneurofriendbot")) {
 
-                SendMessage message = new SendMessage();
+                SendMessage message = askTwitterAccount();
                 message.setChatId(update.getMessage().getChatId().toString());
-                message.setText(update.getMessage().getText());
 
                 try {
                     execute(message); // Call method to send the message
@@ -39,7 +39,9 @@ public class JNFBot extends TelegramLongPollingBot {
     }
 
     private SendMessage askTwitterAccount() {
+        String tweet = twitter.get();
         SendMessage message = new SendMessage();
+        message.setText(tweet);
         return message;
     }
 }
