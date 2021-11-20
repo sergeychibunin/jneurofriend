@@ -3,15 +3,10 @@ package name.sergeychibunin.app;
 import org.telegram.BotConfig;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class JNFBot extends TelegramLongPollingBot {
-
-    public void setTwitter(Twitter twitter) {
-        this.twitter = twitter;
-    }
 
     @Override
     public String getBotUsername() {
@@ -44,6 +39,7 @@ public class JNFBot extends TelegramLongPollingBot {
     }
 
     private SendMessage askTwitterAccount() {
-
+        SendMessage message = new SendMessage();
+        return message;
     }
 }
